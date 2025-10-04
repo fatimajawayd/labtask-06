@@ -1,7 +1,7 @@
 # labtask-06
 
 ## PROBLEM:01
-Print even numbers from 2 to 20 using a for loop
+Print even numbers from 2 to 20 using a for loop.
 
 ```c
 #include <stdio.h>
@@ -90,6 +90,29 @@ int main(void){
 Check if a number is prime (n=7) using a for loop.
 
 ```c
+#include <stdio.h>
+void prime(int i);  
+int main(void){
+    int i=7;
+    prime(i);  //call the function
+    return 0;
+}
+
+void prime(int i){
+    int a, count = 0;
+    for(a=1; a<=i; a++){
+        if(i%a == 0){
+            count++;
+        }
+    }
+    if(count == 2){
+        printf("The number is a prime number.\n");
+    }
+    else{
+        printf("The number is not a prime number.\n");
+    }
+    
+}
 ```
 
 ## PROBLEM:07
@@ -118,12 +141,24 @@ int main(void){
 Check if a number is palindrome n = 121 using a while loop.
 
 ```c
+#include <stdio.h>
+int main(void){
+  int num = 121, a, reverse = 0;
+  a = num;
 
-
-
-
-
-
+  while(num>0){
+    reverse = (reverse*10) + num % 10;
+    num = num/10;
+  }
+  if(reverse==a){
+    printf("Number is palindrome\n");
+  }
+  else{
+    printf("Number is not palindrome\n");
+  }
+  return 0;
+}
+```
 
 ## PROBLEM:09
 Print multiplication table of a number entered by the user.
@@ -143,8 +178,8 @@ int main(void){
 }
 ```
 
-### PROBLEM:10
-keep taking input until user enter zero
+## PROBLEM:10
+keep taking input until user enters zero.
 
 ```c
 #include <stdio.h>
